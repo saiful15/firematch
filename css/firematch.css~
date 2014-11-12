@@ -1,0 +1,210 @@
+/**
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this file,
+You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Copyright (c) 2014, Saiful Alam https://plus.google.com/u/0/+SaifulAlam/about
+**/
+ 
+body {
+	text-align: center;	
+	background: #a46740 url(../images/bg.jpg);
+	color: #ccc;
+}
+
+a, a:visited {
+	color: #aea;
+	text-decoration: none;	
+	-webkit-transition: all .3s;
+	padding: 5px;
+}
+
+a:hover {
+	color: #000;
+	background: #aea;
+	text-shadow: none;
+}
+ 
+#game {
+	border-radius: 10px;
+	border: 1px solid #666;
+	
+	position: relative;
+	background: #232 url(../images/table.jpg);
+	width: 100%;
+	height: 400px;
+	
+	
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	
+	display: -moz-box;
+	-moz-box-pack: center;
+	-moz-box-align: center;	
+}
+
+
+#cards {
+	position: relative;	
+	width: 280px;
+	height: 340px;
+}
+
+.card {
+	-webkit-perspective: 600;
+	width: 55px;
+	height: 80px;
+	
+	/* changed	*/
+	position: absolute;
+	
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.face {
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	
+	-moz-transition-property: opacity, -moz-transform, -moz-box-shadow;
+	-moz-transition-duration: .3s;
+	-webkit-transition-property: opacity, -webkit-transform, -webkit-box-shadow;
+	-webkit-transition-duration: .3s;
+	transition-property: opacity, transform, box-shadow;
+	transition-duration: .3s;
+	
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	
+}
+
+.front {	
+	background: #999 url(../images/deck.png) 0 -320px;
+	z-index: 10;
+	margin-top:25px;
+}
+
+.back {
+	background: #efefef url(../images/deck.png);
+	
+	-moz-transform: rotate3d(0,1,0,-180deg);
+	-webkit-transform: rotate3d(0,1,0,-180deg);
+	transform: rotate3d(0,1,0,-180deg);
+	
+	z-index: 8;
+	margin-top:25px;
+}
+
+.card:hover .face{
+	-webkit-box-shadow: 0 0 20px #aaa;
+	box-shadow: 0 0 10px #aaa;
+}
+
+.card-flipped .face{
+	-webkit-box-shadow: 0 0 20px #aaa;
+	box-shadow: 0 0 10px #aaa;		
+}
+	.card-flipped .front {
+		-moz-transform: rotate3d(0,1,0,180deg);
+		-webkit-transform: rotate3d(0,1,0,180deg);
+		transform: rotate3d(0,1,0,180deg);
+		
+		
+		z-index: 8;
+	}
+	
+	.card-flipped .back {
+		-moz-transform: rotate3d(0,1,0,0deg);
+		-webkit-transform: rotate3d(0,1,0,0deg);
+		transform: rotate3d(0,1,0,0deg);
+		
+		
+		z-index: 10;
+	}
+
+.card-removed {
+	opacity: 0;
+}
+
+
+
+
+.cardAJ {background-position: -800px 0;}
+.cardAQ {background-position: -855px 0;}
+.cardAK {background-position: -910px 0;}
+.cardBJ {background-position: -800px -80px;}
+.cardBQ {background-position: -855px -80px;}
+.cardBK {background-position: -910px -80px;}
+.cardCJ {background-position: -800px -160px;}
+.cardCQ {background-position: -855px -160px;}
+.cardCK {background-position: -910px -160px;}
+.cardDJ {background-position: -800px -240px;}
+.cardDQ {background-position: -855px -240px;}
+.cardDK {background-position: -910px -240px;}
+
+
+
+
+#popup {
+	
+	font-size: 28px;
+	font-weight: 700;	  
+	text-shadow: 0px 1px 2px #fff;
+	
+	color: #222;
+	
+	position: absolute;	  
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	
+	background: rgba(0,0,0,.5);
+	
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;			
+	
+	-webkit-transition: all .5s ease-in;
+}
+
+#popup h1 {
+	font-weight: 400;
+}
+
+#popup-box {
+position: relative;	
+	margin-top: 45px;
+	padding-top: 50px;
+	width: 286px;
+	height: 300px;
+	background: #ccc url(../images/popup_bg.jpg);
+	
+	border-radius: 10px;
+	
+	-webkit-box-shadow: 0 5px 5px #333;
+	
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	
+	-webkit-transition: all .5s ease-in;
+}
+
+#popup-box small {
+	font-size: .6em;
+}
+
+
+#popup.hide {
+	background: rgba(0,0,0,0);
+	visibility: hidden;		
+}
+#popup.hide #popup-box{
+	margin-top: -800px;
+}

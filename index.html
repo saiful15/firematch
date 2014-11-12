@@ -1,0 +1,81 @@
+<!--
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this file,
+You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Copyright (c) 2014, Saiful Alam saiful.alam15@gmail.com
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+   	<meta charset="utf-8">
+   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+		<title>Fire Matching </title>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="css/firematch.css" />
+	  
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/firematch.js"></script> 
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+   
+	</head>
+
+	<body>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/> <!--creating space for the game start button to show -->
+
+	<button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">
+  	Launch Fire Match Game
+	</button>
+
+		<div class="container-fluid modal fade"  id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div id="timer">
+			Elapsed time: <span id="elapsed-time">00:00</span>
+			</div> <!-- timer status -->
+
+			<div class="row"> <!--creating rows -->
+				<div class="col-md-6 col-md-offset-3"> <!-- creating columns -->
+				 
+					<div id="game"> <!-- game board -->
+						<div id="cards">			
+							<div class="card">			
+								<div class="face front"></div>
+								<div class="face back"></div>
+							</div> 					
+						</div> 
+		
+						<div id="popup" class="hide" > <!--congrats splash -->
+							<div id="popup-box"> <!--splash window -->
+								<div id="popup-box-content"> <!--contens -->
+								<p>This Time</p>
+								<p>You Finished In:</p>
+								<p><span class='score'>0</span></p>
+								<p>
+								<small>Last Elapsed Time: <span class='last-score'>20</span>
+								</small>
+								</p>
+								<button type="button" onclick="window.location.href='javascript:location.reload(true)'" class="btn btn-success btn-sm">Play Again</button>	
+
+								</div> <!--contens ends -->
+							</div> <!--splash window ends -->
+						</div>  <!--congrats splash ends -->
+					</div> <!--game board ends -->
+				</div>	<!--column ends -->
+			</div>	<!--rows ends	-->
+		</div>
+	</body>
+</html>
+
+

@@ -1,0 +1,21 @@
+{
+  "version": "1.2",
+  "name": "Fire Match",
+  "description": "This is a Card Matching Game ",
+  "launch_path": "/index.html",
+  "icons": {
+     "32": "/images/icons/icon-32.png",
+     "48": "/images/icons/icon-48.png",
+     "60": "/images/icons/icon-60.png",
+     "90": "/images/icons/icon-90.png",
+     "128": "/images/icons/icon-128.png",
+     "256": "/images/icons/icon-256.png"
+  },
+ "developer": {
+    "name": "Md.Saiful Alam, CastledNut@NutBoltu",
+    "url": "https://plus.google.com/u/0/+SaifulAlam15/about"
+   
+  },
+  "chrome": { "navigation": true },
+  "default_locale": "en"
+}
